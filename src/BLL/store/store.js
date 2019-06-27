@@ -1,13 +1,11 @@
-import {createStore, combineReducers} from 'redux';
-import items from './reducers/items';
-import addItem from './reducers/addItem';
-import basket from './reducers/basket';
-import receipt from './reducers/receipt';
-import initialState from './initialState';
+import {createStore, combineReducers, applyMiddleware} from 'redux';
+import something from './reducers/something';
+import thunk from "redux-thunk";
+import initialState from "./initialState";
 
-
-const store = createStore(
-    combineReducers({items, addItem, basket, receipt}),
+const createStoreWithMiddleware = applyMiddleware(thunk)(createStore);
+const store = createStoreWithMiddleware(
+    combineReducers({something}),
     initialState,
     window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 );

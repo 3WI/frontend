@@ -1,10 +1,10 @@
 import React, {Component} from 'react';
 
 
-export default class Some extends Component {
+export default class SomeButton extends Component {
     render() {
         return (
-            <button onClick={this.props.onClick}></button>
+            <button onClick={this.props.onClick}>3WI</button>
         )
     }
 }
