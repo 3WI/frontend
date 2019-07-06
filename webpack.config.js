@@ -25,6 +25,9 @@ module.exports = {
     },
     devServer: {
         historyApiFallback: true,
+        proxy: {
+            '/api': 'http://3wi.sytes.net'
+        }
     },
     plugins: [
         new HtmlWebpackPlugin({

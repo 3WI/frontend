@@ -1,9 +1,10 @@
 import React, {Component} from 'react';
 import {YMaps, Map, SearchControl, GeolocationControl, Placemark} from 'react-yandex-maps';
 import {getPlacemarks} from "../../../BLL/store/action_creators/placemarks";
-import {urls} from "../../../BLL/store/constants";
+import {MAP_COORDINATES, API_KEY, urls, colors as c} from "../../../BLL/store/constants";
 import {connect} from 'react-redux';
-import {addNewItem} from "../../../BLL/store/action_creators/placemark";
+import {getAddress} from "../../../BLL/store/action_creators/placemark";
+import './map.module.css';
 
 
 class DumpMap extends Component {
@@ -13,19 +14,30 @@ class DumpMap extends Component {
 
     render() {
         return (
-            <YMaps>
-                <Map defaultState={{center: [55.75, 37.57], zoom: 9}} onClick={e => this.props.openNewItemCard(e.get('coords'))}>
+            <YMaps
+                enterprise
+                query={{
+                    apikey: API_KEY,
+                }}
+            >
+                <Map
+                    width="1280px"
+                    height='900px'
+                    defaultState={{center: MAP_COORDINATES, zoom: 9}}
+                    onClick={e => this.props.openNewItemCard(e.get('coords'))}
+                >
                     <GeolocationControl />
                     <SearchControl />
                     {this.props.placemarks.map(
                         placemark => (
                             <Placemark
-                            geometry={placemark.coordinates}
-                            properties={{
-                                hintContent: 'Stack Overflow',
-                                balloonContent: 'Stack Overflow на русском',
-                            }}
-                            modules={['geoObject.addon.balloon', 'geoObject.addon.hint']}
+                                key={placemark.id}
+                                geometry={placemark.ll}
+                                properties={{
+                                    hintContent: placemark.name,
+                                }}
+                                options={{iconColor: c[placemark.state]}}
+                                modules={['geoObject.addon.balloon', 'geoObject.addon.hint']}
                             />
                         )
                     )}
@@ -49,7 +61,7 @@ const mapDispatchToProps = (dispatch) => {
             dispatch(getPlacemarks(url));
         },
         openNewItemCard(coordinates) {
-            dispatch(addNewItem(coordinates))
+            dispatch(getAddress(coordinates))
         }
 
     }

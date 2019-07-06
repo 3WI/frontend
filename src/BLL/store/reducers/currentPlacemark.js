@@ -6,7 +6,8 @@ const currentPlacemark = (state={}, action) => {
         case a.ADD_PLACEMARK:
             return {
                 ...state,
-                coordinates: action.payload,
+                coordinates: action.payload.coordinates,
+                address: action.payload.address,
                 isDisplayed: true
             };
         case a.CLOSE_ITEM_CARD:

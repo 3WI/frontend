@@ -5,7 +5,8 @@ const initialState = {
     },
     currentPlacemark: {
         isDisplayed: false,
-        coordinates: []
+        coordinates: [],
+        address: ''
     }
 };
 
