@@ -2,11 +2,11 @@ import {actions as a} from "../constants";
 import {client} from "../../client";
 
 
-export const setSomething = (data) => ({type: a.SET_SOMETHING, payload: data});
+export const setPlacemarks = (data) => ({type: a.SET_PLACEMARKS, payload: data});
 
-export const getSomethingError = () => ({type: a.GET_SOMETHING_ERROR});
+export const getPlacemarksError = () => ({type: a.GET_PLACEMARKS});
 
-export const getSomething = (url) => (dispatch) => {
+export const getPlacemarks = (url) => (dispatch) => {
     client.get(url)
         .then((response) => {
             if (!response.ok) {
@@ -15,6 +15,6 @@ export const getSomething = (url) => (dispatch) => {
             return response;
         })
         .then((response) => response.json())
-        .then((data) => dispatch(setSomething(data)))
-        .catch(() => dispatch(getSomethingError))
+        .then((data) => dispatch(setPlacemarks(data)))
+        .catch(() => dispatch(getPlacemarksError))
 };

@@ -1,11 +1,11 @@
 const initialState = {
-    something: {
-        getError: false,
-        data: {
-            one: 'one',
-            two: 'two',
-            three: 'three'
-        }
+    placemarks: {
+        getPlacemarksError: false,
+        data: []
+    },
+    currentPlacemark: {
+        isDisplayed: false,
+        coordinates: []
     }
 };
 

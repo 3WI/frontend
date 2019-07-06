@@ -1,16 +1,28 @@
 import React, {Component} from 'react';
-import SomeButtonContainer from './someComponent/someButtonContainer';
+import {connect} from 'react-redux';
+import DumpMap from './map/map';
+import ItemCard from './addItemForm/itemCard';
 
 
 class App extends Component {
     render() {
         return (
             <div>
-                <SomeButtonContainer />
+                <DumpMap />
+                {this.props.addNewItemCardIsDisplayed && <ItemCard />}
             </div>
+
         );
     }
 }
 
 
-export default App;
+const mapStatesToProps = (state) => {
+    return {
+        addNewItemCardIsDisplayed: state.currentPlacemark.isDisplayed
+    }
+};
+
+
+
+export default connect(mapStatesToProps)(App);

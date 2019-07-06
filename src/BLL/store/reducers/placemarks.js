@@ -1,17 +1,17 @@
 import {actions as a} from '../constants';
 
 
-const Something = (state={}, action) => {
+const placemarks = (state={}, action) => {
     switch (action.type) {
-        case a.SET_SOMETHING:
+        case a.SET_PLACEMARKS:
             return {
                 ...state,
                 data: action.payload,
             };
-        case a.GET_SOMETHING_ERROR:
+        case a.GET_PLACEMARKS_ERROR:
             return {
                 ...state,
-                getError: true,
+                getPlacemarksError: false,
             };
         default:
             return state;
@@ -19,4 +19,4 @@ const Something = (state={}, action) => {
 };
 
 
-export default Something;
+export default placemarks;
