@@ -17,20 +17,20 @@ import {
 import './itemCard.module.css';
 
 
-class ItemCard extends Component {
+class EditItemCard extends Component {
     render() {
         return (
             <section id=""
                      className="modal">
-
-                <div className="wrapper" style={{'paddingBottom': 0}}>
+                <form className="form
+                         form--edit">
                     <div className="form-header">
                         <h3 className="modal__title">
-                            Сообщить
-                            <br />о нарушении
+                            Редактирование
+                            <br />заявки
                         </h3>
 
-                        <a href="#" onClick={this.props.onClose}
+                        <a href="#"
                            rel="nofollow"
                            className="link
                               link--close">
@@ -39,17 +39,22 @@ class ItemCard extends Component {
                             </i>
                         </a>
                     </div>
-                </div>
 
+                    <div className="form-information">
+                        <p className="form-information__date">
+                            Заявка от 07.07.2019
+                        </p>
 
-
-                <form className="form" onSubmit={() => this.props.onSaveItem(this.props.item)}>
+                        <button className="button
+                                   button--delete">
+                            Удалить
+                        </button>
+                    </div>
 
                     <div className="input">
                         <input type="text"
                                className="input__field"
-                               value={this.props.item.address}
-                               onChange={() => this.props.onEnterAddress(event)}
+                               id="input-location-demonstration"
                                required />
 
                             <span className="input__bar"></span>
@@ -64,15 +69,22 @@ class ItemCard extends Component {
                             </i>
                     </div>
 
-
                     <div className="select">
-                        <select
-                            className="select__field"
-                            value={this.props.item.violationType}
-                            onChange={this.props.onSelectType}>
-                            {this.props.violationTypes.map(
-                                (violationType, index) => <option className="select__option" key={index}>{violationType}</option>
-                            )}
+                        <select className="select__field">
+                            <option value="1"
+                                    className="select__option">
+                                Стихийная свалка
+                            </option>
+
+                            <option value="2"
+                                    className="select__option">
+                                Option 2
+                            </option>
+
+                            <option value="3"
+                                    className="select__option">
+                                Option 3
+                            </option>
                         </select>
 
                         <span className="select__bar"></span>
@@ -96,8 +108,6 @@ class ItemCard extends Component {
                                name=""
                                value=""
                                id="checkbox-id-1"
-                               checked={this.props.item.plastic}
-                               onChange={this.props.onSetPlasticTrash}
                                className="checkbox__field" />
 
                             <label htmlFor="checkbox-id-1"
@@ -111,8 +121,6 @@ class ItemCard extends Component {
                                name=""
                                value=""
                                id="checkbox-id-2"
-                               checked={this.props.item.metal}
-                               onChange={this.props.onSetMetalTrash}
                                className="checkbox__field" />
 
                             <label htmlFor="checkbox-id-2"
@@ -126,8 +134,6 @@ class ItemCard extends Component {
                                name=""
                                value=""
                                id="checkbox-id-3"
-                               checked={this.props.item.glass}
-                               onChange={this.props.onSetGlassTrash}
                                className="checkbox__field" />
 
                             <label htmlFor="checkbox-id-3"
@@ -141,8 +147,6 @@ class ItemCard extends Component {
                                name=""
                                value=""
                                id="checkbox-id-4"
-                               checked={this.props.item.paper}
-                               onChange={this.props.onSetPaperTrash}
                                className="checkbox__field" />
 
                             <label htmlFor="checkbox-id-4"
@@ -156,8 +160,6 @@ class ItemCard extends Component {
                                name=""
                                value=""
                                id="checkbox-id-5"
-                               checked={this.props.item.household}
-                               onChange={this.props.onSetHouseholdTrash}
                                className="checkbox__field" />
 
                             <label htmlFor="checkbox-id-5"
@@ -171,8 +173,6 @@ class ItemCard extends Component {
                                name=""
                                value=""
                                id="checkbox-id-6"
-                               checked={this.props.item.construction}
-                               onChange={this.props.onSetConstructionTrash}
                                className="checkbox__field" />
 
                             <label htmlFor="checkbox-id-6"
@@ -186,8 +186,6 @@ class ItemCard extends Component {
                                name=""
                                value=""
                                id="checkbox-id-7"
-                               checked={this.props.item.other}
-                               onChange={this.props.onSetOtherTrash}
                                className="checkbox__field" />
 
                             <label htmlFor="checkbox-id-7"
@@ -196,55 +194,156 @@ class ItemCard extends Component {
                             </label>
                     </div>
 
-                    <div className="button
-                            button--outline
-                            button--upload">
-                        <input
-                            multiple
-                            type="file"
-                            className="button__field"
-                            onChange={this.props.onSetPicture}
-                        />
-
-                            <i className="material-icons
-                              button__icon">
-                                add_photo_alternate
-                            </i>
-
-                            <span className="button__text">Прикрепить файл</span>
-                    </div>
-
-                    {this.props.item.picture.map(
-                        (fileName, index) => (
-                                <div key={index} className="downloaded">
-                                    <div className="downloaded-item">
-                                        <a href="#" onClick={() => this.props.onDeletePicture(fileName[1])}
-                                           className="link">
-                                            <i className="material-icons
-                                      link__icon">
-                                                close
-                                            </i>
-                                        </a>
-
-                                        <span className="downloaded-item__file-name">{fileName[0]}</span>
-                                    </div>
-                                </div>
-                            )
-                    )}
-
                     <div className="textarea">
-                    <textarea
-                        name=""
-                        value={this.props.item.comment}
-                        className="textarea__field"
-                        placeholder="Введите комментарий"
-                        onChange={this.props.onSetComment}>
-                    </textarea>
+                    <textarea name=""
+                              id=""
+                              className="textarea__field"
+                              placeholder="Введите комментарий"></textarea>
 
                         <span className="textarea__bar"></span>
                     </div>
 
-                    <input type="submit" className="button button--default" placeholder="Отправить"/>
+                    <div className="form-control">
+                        <div>
+                            <div className="input">
+                                <input type="text"
+                                       className="input__field"
+                                       required />
+
+                                    <span className="input__bar"></span>
+
+                                    <label className="input__label">
+                                        Объем
+                                    </label>
+
+                                    <i className="text__icon">
+                                        м3
+                                    </i>
+                            </div>
+                        </div>
+                        <div>
+                            <div className="input">
+                                <input type="text"
+                                       className="input__field"
+                                       required />
+
+                                    <span className="input__bar"></span>
+
+                                    <label className="input__label">
+                                        Площадь
+                                    </label>
+
+                                    <i className="text__icon">
+                                        м2
+                                    </i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h3 className="modal__sub-title">
+                        Выберите класс опасности:
+                    </h3>
+
+                    <div className="checkbox-control">
+                        <div className="checkbox">
+                            <input type="checkbox"
+                                   name=""
+                                   value=""
+                                   id="checkbox-id-1"
+                                   className="checkbox__field"
+                                   checked="checked" />
+
+                                <label htmlFor="checkbox-id-1"
+                                       className="checkbox__label">
+                                    1
+                                </label>
+                        </div>
+
+                        <div className="checkbox">
+                            <input type="checkbox"
+                                   name=""
+                                   value=""
+                                   id="checkbox-id-1"
+                                   className="checkbox__field" />
+
+                                <label htmlFor="checkbox-id-1"
+                                       className="checkbox__label">
+                                    2
+                                </label>
+                        </div>
+
+                        <div className="checkbox">
+                            <input type="checkbox"
+                                   name=""
+                                   value=""
+                                   id="checkbox-id-2"
+                                   className="checkbox__field" />
+
+                                <label htmlFor="checkbox-id-2"
+                                       className="checkbox__label">
+                                    3
+                                </label>
+                        </div>
+
+                        <div className="checkbox">
+                            <input type="checkbox"
+                                   name=""
+                                   value=""
+                                   id="checkbox-id-3"
+                                   className="checkbox__field" />
+
+                                <label htmlFor="checkbox-id-3"
+                                       className="checkbox__label">
+                                    4
+                                </label>
+                        </div>
+
+                        <div className="checkbox">
+                            <input type="checkbox"
+                                   name=""
+                                   value=""
+                                   id="checkbox-id-3"
+                                   className="checkbox__field" />
+
+                                <label htmlFor="checkbox-id-3"
+                                       className="checkbox__label">
+                                    5
+                                </label>
+                        </div>
+                    </div>
+
+                    <div className="input">
+                        <input type="text"
+                               className="input__field"
+                               required />
+
+                            <span className="input__bar"></span>
+
+                            <label className="input__label">
+                                Ваш комментарий
+                            </label>
+                    </div>
+
+                    <div className="input">
+                        <input type="text"
+                               className="input__field"
+                               required />
+
+                            <span className="input__bar"></span>
+
+                            <label className="input__label">
+                                Стоимость вывоза
+                            </label>
+
+                            <i className="text__icon">
+                                Рублей
+                            </i>
+                    </div>
+
+                    <button className="button
+                               button--default">
+                        Сохранить
+                    </button>
 
                 </form>
             </section>
@@ -301,8 +400,7 @@ const mapDispatchToProps = (dispatch) => {
         },
         onSaveItem(item) {
             event.preventDefault();
-            dispatch(saveItem(item));
-            dispatch(closeAddNewItemCard());
+            dispatch(saveItem(item))
         },
         onClose() {
             dispatch(closeAddNewItemCard());
@@ -311,4 +409,4 @@ const mapDispatchToProps = (dispatch) => {
 };
 
 
-export default connect(mapStateToProps, mapDispatchToProps)(ItemCard);
+export default connect(mapStateToProps, mapDispatchToProps)(EditItemCard);

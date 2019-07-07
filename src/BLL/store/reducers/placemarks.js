@@ -1,18 +1,17 @@
 import {actions as a} from '../constants';
 
 
-const placemarks = (state={}, action) => {
+const placemarks = (state=[], action) => {
     switch (action.type) {
-        case a.SET_PLACEMARKS:
-            return {
+        case a.SAVE_ITEM:
+            const item = action.payload;
+            const x = item.coordinates[0];
+            item.coordinates[0] = item.coordinates[1];
+            item.coordinates[1] = x;
+            return [
                 ...state,
-                data: action.payload,
-            };
-        case a.GET_PLACEMARKS_ERROR:
-            return {
-                ...state,
-                getPlacemarksError: false,
-            };
+                item
+            ];
         default:
             return state;
     }
