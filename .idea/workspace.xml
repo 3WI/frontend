@@ -2,34 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="144fcac1-9a3a-48e2-afa3-0292ad0f49fe" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/BLL/store/action_creators/filtrationPanel.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/BLL/store/reducers/filterPanel.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/UI/components/addItemForm/itemCard.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/UI/components/editItemForm/editItemCard.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/UI/components/editItemForm/itemCard.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/UI/components/filtrationPanel/filtrationPanel.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/UI/components/fonts/latoblack.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/UI/components/fonts/latoblack.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/UI/components/fonts/latoblack.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/UI/components/fonts/latomedium.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/UI/components/fonts/latomedium.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/UI/components/fonts/latomedium.woff2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/BLL/store/action_creators/placemark.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/BLL/store/action_creators/placemark.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/BLL/store/action_creators/placemarks.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/BLL/store/action_creators/placemarks.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/BLL/store/constants.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/BLL/store/constants.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/BLL/store/initialState.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/BLL/store/initialState.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/BLL/store/reducers/currentPlacemark.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/BLL/store/reducers/currentPlacemark.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/BLL/store/reducers/placemarks.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/BLL/store/reducers/placemarks.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/BLL/store/store.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/BLL/store/store.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UI/components/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/components/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UI/components/addItemForm/itemCard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/components/addItemForm/itemCard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UI/components/map/map.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/components/map/map.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UI/components/someComponent/someButton.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UI/components/someComponent/someButtonContainer.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UI/components/App.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/components/App.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UI/components/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/components/style.css" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -63,11 +37,29 @@
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/UI/components/style.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-705">
+              <caret line="19" column="4" lean-forward="true" selection-end-line="958" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/UI/components/App.module.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="935" column="14" selection-start-line="935" selection-start-column="14" selection-end-line="935" selection-end-column="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/UI/components/addItemForm/itemCard.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="226">
-              <caret line="304" column="44" selection-start-line="304" selection-start-column="44" selection-end-line="304" selection-end-column="44" />
+            <state relative-caret-position="481">
+              <caret line="303" column="37" selection-start-line="303" selection-start-column="37" selection-end-line="303" selection-end-column="37" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
@@ -103,27 +95,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/UI/components/editItemForm/itemCard.module.css">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/UI/components/editItemForm/editItemCard.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="6165">
               <caret line="411" column="15" selection-start-line="411" selection-start-column="15" selection-end-line="411" selection-end-column="15" />
-              <folding>
-                <element signature="e#0#39#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/UI/components/App.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="17" column="62" selection-start-line="17" selection-start-column="62" selection-end-line="17" selection-end-column="62" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
@@ -190,7 +165,6 @@
         <option value="$PROJECT_DIR$/src/UI/components/showItemForm/notEditeditemCard.js" />
         <option value="$PROJECT_DIR$/src/BLL/store/action_creators/placemark.js" />
         <option value="$PROJECT_DIR$/src/BLL/store/reducers/placemarks.js" />
-        <option value="$PROJECT_DIR$/src/UI/components/App.module.css" />
         <option value="$PROJECT_DIR$/src/BLL/store/action_creators/filtrationPanel.js" />
         <option value="$PROJECT_DIR$/src/BLL/store/reducers/filterPanel.js" />
         <option value="$PROJECT_DIR$/src/BLL/store/store.js" />
@@ -204,6 +178,7 @@
         <option value="$PROJECT_DIR$/src/BLL/store/initialState.js" />
         <option value="$PROJECT_DIR$/src/BLL/store/action_creators/placemarks.js" />
         <option value="$PROJECT_DIR$/src/UI/components/addItemForm/itemCard.js" />
+        <option value="$PROJECT_DIR$/src/UI/components/App.module.css" />
       </list>
     </option>
   </component>
@@ -399,12 +374,12 @@
       <workItem from="1561626915885" duration="1782000" />
       <workItem from="1562248489874" duration="38000" />
       <workItem from="1562416657399" duration="31277000" />
-      <workItem from="1562451535215" duration="42121000" />
+      <workItem from="1562451535215" duration="42923000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="78790000" />
+    <option name="totallyTimeSpent" value="79592000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1366" height="693" extended-state="6" />
@@ -579,13 +554,6 @@
     <entry file="file://$PROJECT_DIR$/src/BLL/store/reducers/violationTypes.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/UI/components/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="8" lean-forward="true" selection-end-line="912" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/BLL/store/store.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
@@ -611,13 +579,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="181">
           <caret line="22" column="19" lean-forward="true" selection-start-line="22" selection-start-column="19" selection-end-line="22" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/UI/components/App.module.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="841" column="20" selection-start-line="841" selection-start-column="1" selection-end-line="841" selection-end-column="20" />
         </state>
       </provider>
     </entry>
@@ -723,6 +684,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/BLL/store/reducers/currentPlacemark.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="12" column="8" selection-start-line="12" selection-start-column="8" selection-end-line="16" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/UI/components/addItemForm/itemCard.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="481">
+          <caret line="303" column="37" selection-start-line="303" selection-start-column="37" selection-end-line="303" selection-end-column="37" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/BLL/store/action_creators/placemark.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="401">
@@ -733,20 +711,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/BLL/store/reducers/currentPlacemark.js">
+    <entry file="file://$PROJECT_DIR$/src/UI/components/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="12" column="8" selection-start-line="12" selection-start-column="8" selection-end-line="16" selection-end-column="14" />
+        <state relative-caret-position="-705">
+          <caret line="19" column="4" lean-forward="true" selection-end-line="958" selection-end-column="1" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/UI/components/addItemForm/itemCard.js">
+    <entry file="file://$PROJECT_DIR$/src/UI/components/App.module.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="226">
-          <caret line="304" column="44" selection-start-line="304" selection-start-column="44" selection-end-line="304" selection-end-column="44" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="135">
+          <caret line="935" column="14" selection-start-line="935" selection-start-column="14" selection-end-line="935" selection-end-column="14" />
         </state>
       </provider>
     </entry>

@@ -152,28 +152,6 @@ a, button, input {
 
 }
 
-@font-face {
-    font-family: 'Lato';
-    /*src: local('fonts/Lato Medium'),*/
-    /*local('fonts/Lato-Medium'),*/
-    /*url('fonts/latomedium.woff2') format('woff2'),*/
-    /*url('fonts/latomedium.woff') format('woff'),*/
-    /*url('fonts/latomedium.ttf') format('truetype');*/
-    font-weight: 500;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Lato';
-    /*src: local('fonts/Lato Black'),*/
-    /*local('fonts/Lato-Black'),*/
-    /*url('fonts/latoblack.woff2') format('woff2'),*/
-    /*url('fonts/latoblack.woff') format('woff'),*/
-    /*url('fonts/latoblack.ttf') format('truetype');*/
-    font-weight: 900;
-    font-style: normal;
-}
-
 html, body {
     color: #151515;
     font: 500 16px/1.5 'Lato', sans-serif;
@@ -232,7 +210,7 @@ html, body {
 
 .modal {
     position: absolute;
-    top: 0;
+    top: 80px;
     left: 0;
     width: 338px;
     height: 100%;
@@ -368,7 +346,8 @@ html, body {
     font-size: 14px;
 }
 
-.form-information .button--delete {
+.form-information .button--delete,
+.form--application .button--info {
     padding-top: 4px;
     padding-left: 16px;
     padding-right: 16px;
@@ -386,9 +365,14 @@ html, body {
     background-color: #F44336;
 }
 
+.form--application .button--info {
+    flex-basis: 100%;
+}
 
-
-*{ box-shadow: 0 0 0 px }
+.form-information .button--info:hover {
+    color: #fff;
+    background-color: #1074E7;
+}
 
 
 
@@ -499,8 +483,11 @@ html, body {
 
 .input__field:focus ~ .text__icon {
     color: #1074E7;
+    display: flex;
+    justify-content: flex-end;
 }
 
+*{ box-shadow: 0 0 0px }
 
 /* select */
 .select {
@@ -526,6 +513,7 @@ html, body {
     font-size: 16px;
     width: 100%;
     border: none;
+    background-color: transparent;
     border-bottom: 1px solid #8C98A6;
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -589,7 +577,7 @@ html, body {
 
 
 
-*{ box-shadow: 0 0 0 px }
+*{ box-shadow: 0 0 0px }
 
 
 /* checkbox */
@@ -673,6 +661,10 @@ html, body {
 
 .button--upload {
     height: 48px;
+}
+
+.button--success {
+    background-color: #07B060;
 }
 
 .button__field {
@@ -778,7 +770,7 @@ input[type=file]::-webkit-file-upload-button {
 }
 
 
-*{ box-shadow: 0 0 0 px }
+*{ box-shadow: 0 0 0px }
 
 /* list */
 .list {
@@ -876,6 +868,11 @@ input[type=file]::-webkit-file-upload-button {
     color: #8C98A6;
 }
 
+.list--information > li {
+    display: flex;
+    flex-basis: 100%;
+    margin-top: 2px;
+}
 
 
 
@@ -910,4 +907,31 @@ input[type=file]::-webkit-file-upload-button {
 
 .form-control > div:last-child {
     padding-left: 16px;
+}
+
+.application__title {
+    display: flex;
+    width: 100%;
+    margin-top: 24px;
+    font-size: 20px;
+}
+
+.application__image {
+    position: relative;
+    display: flex;
+    width: 100%;
+    margin-top: 24px;
+}
+
+.application__comments {
+    margin-top: 32px;
+}
+
+.application__comments-label {
+    font-size: 12px;
+    color: #8C98A6;
+}
+
+.application__comments-text {
+    margin-top: 6px;
 }
